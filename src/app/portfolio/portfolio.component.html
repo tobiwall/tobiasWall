@@ -1,0 +1,21 @@
+<section id="portfolio">
+  <div class="headline-container">
+    <div class="line-left"></div>
+    <h1>Portfolio</h1>
+    <div class="line-right"></div>
+  </div>
+  <p>Explore a selection of my work here - Interact width projects to see my skills in action.</p>
+  
+  <div class="projects" *ngFor="let portfolio of portfolio; let i = index" [class.reverse]="i % 2 === 1">
+    <img src="./assets/img/portfolio/{{ portfolio.image }}.png" alt="" />
+    <div class="portfolio-right">
+      <h3>{{ portfolio.name }}</h3>
+      <h4>{{ portfolio.skills }}</h4>
+      <span> {{ portfolio.description }} </span>
+      <div class="buttons">
+        <button class="primary">Live test</button>
+        <button class="secondary">Github</button>
+      </div>
+    </div>
+  </div>
+</section>
