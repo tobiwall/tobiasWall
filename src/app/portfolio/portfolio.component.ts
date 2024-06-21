@@ -15,26 +15,33 @@ export class PortfolioComponent {
       name: 'Join',
       skills: 'HTML | CSS | Javascript | Firebase',
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign useres and categories.',
-      image: 'join'
+      image: 'portfolio-join',
+      githubUrl: 'https://github.com/tobiwall/ownjoin',
+      liveUrl: 'https://join.tobias-wall.de/index.html'
     },
     {
       name: 'El pollo loco',
       skills: 'HTML | CSS | Javascript',
       description: 'A simple jump and run game based on an object-oriented approach. Help pepe to find coins and salsa bottles to fight against the big endboss.',
-      image: 'pollo-loco'
+      image: 'portfolio-pollo-loco',
+      githubUrl: 'https://github.com/tobiwall/el_pollo_loco_wall',
+      liveUrl: 'https://el-pollo-loco.tobias-wall.de/index.html'
     },
     {
       name: 'Simple CRM',
       skills: 'TypeScript | SCSS | Angular | Firebase',
-      description: 'A very Simple Customer Relationship Management system working width CRUD funktionality.',
-      image: 'crm'
+      description: 'This Project will be ready soon',
+      image: 'empty-screen',
+      githubUrl: 'https://github.com/tobiwall',
+      liveUrl: ''
     },
     {
       name: 'Pokédex',
       skills: 'HTML | CSS | Javascript | Api',
       description: 'Based in the PokéAPI a simple library that provides and catalogues pokemon information.',
-      image: 'pokedex'
+      image: 'portfolio-pokedex',
+      githubUrl: 'https://github.com/tobiwall',
+      liveUrl: 'https://pokedex.tobias-wall.de/index.html'
     }
   ]
-
 }

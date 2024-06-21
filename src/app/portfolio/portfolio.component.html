@@ -13,8 +13,12 @@
       <h4>{{ portfolio.skills }}</h4>
       <span> {{ portfolio.description }} </span>
       <div class="buttons">
-        <button class="primary">Live test</button>
-        <button class="secondary">Github</button>
+        <a [href]="portfolio.liveUrl" target="_blank">
+          <button class="primary">Live test</button>
+        </a>
+        <a [href]="portfolio.githubUrl" target="_blank">
+          <button class="secondary">Github</button>
+        </a>
       </div>
     </div>
   </div>

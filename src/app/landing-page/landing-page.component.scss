@@ -1,11 +1,12 @@
 .landing-page {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-color: rgb(20, 29, 47);
     display: flex;
     align-items: center;
     overflow: hidden;
     position: relative;
+    justify-content: space-around;
 }
 
 .header {
@@ -27,26 +28,26 @@
 
     > .right-shadow {
         width: 480px;
-        top: 230px;
+        top: 220px;
         left: 124px;
-        z-index: 1;
+        z-index: 9;
     }
 
     > .left-shadow {
         width: 400px;
-        top: 250px;
+        top: 220px;
         left: -80px;
-        z-index: 1;
+        z-index: 9;
     }
 
     > .profil-img {
-        top: 16%;
+        top: 92px;
         left: 16px;
         width: 500px;
         height: 700px;
         object-fit: cover;
         object-position: top;
-        z-index: 2;
+        z-index: 10;
     }
 }
 
@@ -54,9 +55,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    z-index: 20;
     > .letsTalk {
-        z-index: 4;
+        z-index: 40;
         margin-top: 24px;
 
         > button {
@@ -86,23 +87,21 @@
 }
 
 .verticalHeadline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transform: rotate(-90deg);
-    transform-origin: center bottom;
-    width: 150px;
-    height: 87px;
+    transform-origin: center center;
     color: white !important;
     margin: 0;
     > h2 {
         font-size: 58px;
-        margin-top: 80px;
-        margin-bottom: 0;
+        margin: 0;
         font-weight: 300;
     }
 }
 
 .horizontalHeadline {
-    height: 100%;
-    width: 80%;
     > h1 {
         color: white;
         font-size: 90px;
@@ -119,7 +118,7 @@
 }
 
 .link-container {
-    z-index: 4;
+    z-index: 20;
     display: flex;
     align-items: center;
     position: absolute;
@@ -140,7 +139,7 @@
     }
 
     > a:hover {
-        transform: scale(1.4);
+        transform: scale(1.3);
         color: #4b47ff;
     }
 }
@@ -153,7 +152,7 @@
 }
 
 .scroll-down {
-    z-index: 4;
+    z-index: 14;
     color: white;
     font-weight: 300;
     position: absolute;
@@ -171,10 +170,99 @@
 .landingpage-bottom {
     width: 100%;
     height: 650px;
-    z-index: 3;
+    z-index: 11;
     position: absolute;
     bottom: -200px;
     left: 0;
     right: 0;
     overflow: hidden;
+    background-color: transparent;
+}
+
+@media (max-width: 1300px) {
+    .profil-img-container {
+        > .profil-img {
+            width: 380px;
+            margin-left: 48px;
+        }
+    }
+
+    .headline-container {
+        height: fit-content;
+
+        > .verticalHeadline {
+            > h2 {
+                font-size: 32px !important;
+            }
+        }
+    }
+
+    .horizontalHeadline {
+        > h1 {
+            font-size: 64px !important;
+        }
+
+        > h2 {
+            font-size: 40px !important;
+            margin-top: 0;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .headline-container {
+        > .verticalHeadline {
+            > h2 {
+                font-size: 24px !important;
+            }
+        }
+    }
+    .horizontalHeadline {
+        > h1 {
+            font-size: 40px !important;
+        }
+
+        > h2 {
+            font-size: 32px !important;
+        }
+    }
+
+    .letsTalk {
+        margin-top: 8px !important;
+
+        > button {
+            width: 100px !important;
+            height: 32px !important;
+            font-size: 16px !important;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .profil-img-container {
+        > .profil-img {
+            bottom: 180px;
+            height: 400px;
+            width: 280px;
+            margin-left: 80px;
+        }
+        > .right-shadow {
+            width: 320px;
+            left: 140px;
+            bottom: 180px;
+        }
+
+        > .left-shadow {
+            bottom: 70px;
+            left: -20px;
+            width: 320px;
+        }
+    }
+}
+
+@media(max-width: 740px) {
+    .landing-page {
+        flex-direction: column;
+    }
+
 }

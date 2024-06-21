@@ -19,10 +19,10 @@ export class ContactformComponent {
     message: ''
   }
 
-  mailTest = true;
+  mailTest = false;
 
   post = {
-    endPoint: 'https://tobias-wall.developerakademie.net/angular-projects/tobiasWall/sendMail.php',
+    endPoint: 'https://tobias-wall.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -45,7 +45,7 @@ export class ContactformComponent {
           },
           complete: () => console.info('send post complete'),
         });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+    } else if (ngForm.submitted && ngForm.form.valid) {
 
       ngForm.resetForm();
     }

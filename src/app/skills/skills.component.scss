@@ -8,7 +8,9 @@ section {
 
 .left-side {
     width: 60%;
-
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     > img {
         margin: 64px;
     }
@@ -45,14 +47,53 @@ section {
         color: white;
     }
 
-    > button {
-        width: 180px;
-        height: 48px;
-        border-radius: 8px;
-        border: none;
-        color: white;
-        font-size: 24px;
-        background-color: rgb(4,190,232);
-        margin-top: 24px;
+    > a {
+        > button {
+            width: 180px;
+            height: 48px;
+            border-radius: 8px;
+            border: none;
+            color: white;
+            font-size: 24px;
+            background-color: rgb(4, 190, 232);
+            margin-top: 24px;
+            transition: transform 0.3s ease;
+        }
+
+        > button:hover {
+            cursor: pointer;
+            background-color: #4b47ff;
+            transform: scale(1.3);
+        }
+    }
+}
+
+@media(max-width: 1250px) {
+    h1 {
+        font-size: 64px !important;
+    }
+
+    .left-side {
+        
+        > img {
+        margin: 40px !important;
+        }
+    }
+}
+
+@media(max-width: 1000px) {
+    section {
+        flex-direction: column-reverse;
+
+        > .right-side {
+            width: 100%;
+        }
+
+        > .left-side {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
     }
 }

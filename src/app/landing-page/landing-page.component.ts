@@ -10,5 +10,5 @@ import { HeaderComponent } from '../share/header/header.component';
 })
 export class LandingPageComponent {
 
-  email: string = 't.w.95@web.de'
+  email: string = 'info@tobias-wall.de'
 }
