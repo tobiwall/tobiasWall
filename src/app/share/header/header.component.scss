@@ -3,6 +3,7 @@ header {
     height: 80px;
     display: flex;
     justify-content: center;
+    background-color: rgb(20, 29, 47);
 }
 
 .max-width {
@@ -11,7 +12,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgb(20, 29, 47);
 
     > a {
         transition: transform 0.3s ease;

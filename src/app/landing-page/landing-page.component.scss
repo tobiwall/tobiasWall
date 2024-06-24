@@ -19,14 +19,6 @@
     max-width: 1920px;
 }
 
-.header {
-    z-index: 999;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-}
-
 .profil-img-container {
     width: 40%;
     height: 100vh;
@@ -163,7 +155,7 @@
 }
 
 .scroll-down {
-    z-index: 14;
+    z-index: 140;
     color: white;
     font-weight: 300;
     position: absolute;

@@ -5,14 +5,14 @@
     display: flex;
     justify-content: center;
     position: relative;
+    overflow-x: hidden;
+    overflow-y: visible;
 }
 
 .max-width {
     max-width: 1920px;
-    position: relative;
     display: flex;
     width: 100%;
-    overflow: hidden;
 }
 
 .left-container {
@@ -61,11 +61,15 @@
 }
 
 .shadow {
-    width: 800px;
+    background-image: url(../../assets/img/purple-shadow.png);
+    width: 808px;
+    height: 1067px;
     position: absolute;
-    left: 80%;
-    bottom: -240px;
-    z-index: 40;
+    background-size: contain;
+    background-repeat: no-repeat;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
 }
 
 h1 {
@@ -73,6 +77,24 @@ h1 {
     color: white;
     font-size: 90px;
     z-index: 30;
+}
+
+@media (max-width: 2500px) {
+    .shadow {
+        width: 560px;
+        height: 1067px;  
+        right: 2%;
+        bottom: -140px;
+    }
+}
+
+@media (max-width: 2000px) {
+    .shadow {
+        width: 800px;
+        height: 1200px;  
+        right: -280px;
+        bottom: 0px;
+    }
 }
 
 @media (max-width: 1250px) {
@@ -147,5 +169,12 @@ h1 {
 @media (max-width: 500px) {
     .left-container {
         padding: 16px;
+    }
+
+    .shadow {
+        width: 800px;
+        height: 1200px;  
+        right: -400px;
+        bottom: 0px;
     }
 }
