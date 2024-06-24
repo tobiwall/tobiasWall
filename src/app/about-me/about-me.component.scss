@@ -14,6 +14,7 @@
 }
 
 .left-container {
+    z-index: 130;
     width: 50%;
     padding: 80px;
     color: white;
@@ -62,7 +63,7 @@
     width: 808px;
     position: absolute;
     right: 0;
-    bottom: 0;
+    top: 70vh;
     z-index: 100;
 }
 
@@ -82,9 +83,8 @@ h1 {
 
 @media (max-width: 2000px) {
     .shadow {
-        width: 800px;
-        right: -280px;
-        bottom: 0px;
+        width: 600px;
+        top: 80vh;
     }
 }
 

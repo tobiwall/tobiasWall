@@ -1,0 +1,71 @@
+.shadow-div {
+    position: absolute;
+    width: 800px;
+    height: 1500px;
+    right: 0;
+    top: 80vh;
+    z-index: 120;
+    overflow-x: hidden;
+}
+
+.shadow-skills {
+    position: absolute;
+    width: 800px;
+    height: 1500px;
+    left: 0;
+    top: 180vh;
+    z-index: 120;
+    overflow-x: hidden;
+}
+
+.relative {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.shadow {
+    position: absolute;
+    width: 100%;
+    right: 0;
+}
+
+.img-skills {
+    position: absolute;
+    width: 100%;
+    right: 0;
+    transform: rotate(40deg);
+}
+
+@media (max-width: 2400px) {
+    .shadow {
+        width: 80%;
+        right: -80px;
+    }
+
+    .img-skills {
+        width: 80%;
+        left: -220px;
+    }
+}
+
+@media (max-width: 800px) {
+    .shadow {
+        width: 70%;
+        right: -180px;
+    }
+
+    .shadow-div {
+        max-width: 100%;
+    }
+    .shadow-skills {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .img-skills {
+        width: 80%;
+        left: -120px;
+    }
+}
