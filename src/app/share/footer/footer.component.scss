@@ -3,50 +3,75 @@ footer {
     height: 240px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     border-top: solid 3px rgb(4, 190, 232);
 
-    > .left-part {
-        width: 33%;
-        height: 100%;
+    > .max-width {
         display: flex;
+        max-width: 1920px;
+        > .left-part {
+            width: 33%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            > img {
+                width: 90%;
+            }
+
+            > a {
+                text-decoration: none;
+                color: white;
+                margin-top: 16px;
+            }
+        }
+
+        > .middle-part {
+            width: 33%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            > a {
+                color: white;
+                text-decoration: none;
+                font-size: 24px;
+            }
+        }
+
+        > .right-part {
+            width: 33%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 48px;
+            padding-right: 64px;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    footer {
+        height: 380px;
+    }
+    .max-width {
+        height: 100%;
+        width: 100%;
         flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        padding-left: 64px;
-        
-        > img {
-            height: 64px;
-        }
-
-        > a {
-            text-decoration: none;
-            color: white;
-            margin-top: 16px;
-        }
-    }
-
-    > .middle-part {
-        width: 33%;
-        height: 100%;
-        display: flex;
+        justify-content: space-around;
         align-items: center;
-        justify-content: center;
 
-        > a {
-            color: white;
-            text-decoration: none;
-            font-size: 24px;
+        > .right-part {
+            padding: 0 !important;
+            justify-content: center !important;
         }
-    }
 
-    > .right-part {
-        width: 33%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        gap: 48px;
-        padding-right: 64px;
+        > .left-part {
+            width: 100% !important;
+        }
     }
 }

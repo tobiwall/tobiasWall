@@ -1,8 +1,15 @@
 <header>
-    <a href="#landingpage"><img src="./assets/img/logo.png" alt=""></a>
-    <div class="header-link">
-        <a href="#about-me">About me</a>
-        <a href="#skills">Skills</a>
-        <a href="#portfolio">Portfolio</a>
+  <div class="max-width">
+    <a href="#landingpage" *ngIf="!isHeaderOpen"><img src="./assets/img/logo.png" alt="" /></a>
+    <div class="header-link" *ngIf="isHeaderOpen || isWideScreen">
+      <a href="#about-me">About me</a>
+      <a href="#skills">Skills</a>
+      <a href="#portfolio">Portfolio</a>
     </div>
+    <div (click)="openHeaderBar()" class="burger-btn">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+  </div>
 </header>

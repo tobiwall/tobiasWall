@@ -1,10 +1,18 @@
 #about-me {
     padding-top: 90px;
     width: 100%;
-    min-height: calc(100vh - 90px);
     background-color: rgb(20, 29, 47);
     display: flex;
+    justify-content: center;
     position: relative;
+}
+
+.max-width {
+    max-width: 1920px;
+    position: relative;
+    display: flex;
+    width: 100%;
+    overflow: hidden;
 }
 
 .left-container {
@@ -53,16 +61,18 @@
 }
 
 .shadow {
+    width: 800px;
     position: absolute;
-    right: -280px;
-    top: -15%;
-    z-index: 5;
+    left: 80%;
+    bottom: -240px;
+    z-index: 40;
 }
 
 h1 {
     margin: 0;
     color: white;
     font-size: 90px;
+    z-index: 30;
 }
 
 @media (max-width: 1250px) {
@@ -92,7 +102,7 @@ h1 {
         padding: 40px;
         > .img-text {
             > .icon {
-                margin-right: 32px !important;
+                margin-right: 16px !important;
                 > img {
                     width: 40px !important;
                 }
@@ -131,5 +141,11 @@ h1 {
 
     .left-container {
         width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .left-container {
+        padding: 16px;
     }
 }
