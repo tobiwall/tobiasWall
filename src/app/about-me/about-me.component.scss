@@ -5,8 +5,6 @@
     display: flex;
     justify-content: center;
     position: relative;
-    overflow-x: hidden;
-    overflow-y: visible;
 }
 
 .max-width {
@@ -39,7 +37,7 @@
 }
 
 .right-container {
-    z-index: 1;
+    z-index: 200;
     width: 50%;
     display: flex;
     align-items: center;
@@ -61,12 +59,8 @@
 }
 
 .shadow {
-    background-image: url(../../assets/img/purple-shadow.png);
     width: 808px;
-    height: 1067px;
     position: absolute;
-    background-size: contain;
-    background-repeat: no-repeat;
     right: 0;
     bottom: 0;
     z-index: 100;
@@ -81,8 +75,6 @@ h1 {
 
 @media (max-width: 2500px) {
     .shadow {
-        width: 560px;
-        height: 1067px;  
         right: 2%;
         bottom: -140px;
     }
@@ -91,7 +83,6 @@ h1 {
 @media (max-width: 2000px) {
     .shadow {
         width: 800px;
-        height: 1200px;  
         right: -280px;
         bottom: 0px;
     }
@@ -173,7 +164,6 @@ h1 {
 
     .shadow {
         width: 800px;
-        height: 1200px;  
         right: -400px;
         bottom: 0px;
     }
