@@ -1,4 +1,19 @@
 {
-    "HELLO": "Hello World",
-    "EMAIL": "Email: info@tobias-wall.de"
-  }
+  "HEADER": "I am",
+  "FRONDENDH2": "Frontend Developer",
+  "BUTTON": "Let´s talk!",
+  "ABOUTH1": "About me",
+  "TEXT1": "Hi, I am a Front-end developer based in Altenkirchenand I´m 29 years old. I gained my experience through training at the TÜV-certified Developer Akademie GmbH.",
+  "TEXT2": "I really enjoy finding creative and effective solutions for designing digital experiences. The diversity and dynamism of programming inspires me every day.",
+  "TEXT3": "I am disciplined and have a logical understanding that helps me deal with even more complex problems. Feel free to check out my projects to get an idea of ​​what I've been working on.",
+  "SKILLS-h1": "My skills",
+  "SKILLS-p": "I have grown my frontend developments skills that have allowed me to create different real projects.",
+  "SKILLS-BTN": "Get in touch",
+  "PORTFOLIO-TEXT1": "Explore a selection of my work here - Interact width projects to see my skills in action.",
+
+  "CONTACT-h1": "Contact",
+  "CONTACT-h2": "Got a problem to solve?",
+  "CONTACT-TEXT1": "Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.",
+  "CONTACT-TEXT2": "Need a Frontend developer?",
+  "CONTACT-TEXT3": "Contact me!"
+}

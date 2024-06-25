@@ -10,7 +10,7 @@
   />
   <input
     [(ngModel)]="contactData.email"
-    type="text"
+    type="email"
     id="email"
     class="input-style"
     name="email"
@@ -31,6 +31,9 @@
   ></textarea>
   @if (!message.valid && message.touched) {
     <span>Please enter a message</span>
+  }
+  @if (mailSend) {
+    <span>Mail send</span>
   }
 
   <input class="button" type="submit" value="Send message" />

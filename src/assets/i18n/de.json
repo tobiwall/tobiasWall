@@ -1,4 +1,19 @@
 {
-    "HELLO": "Hallo Welt",
-    "EMAIL": "E-Mail-Adresse: info@tobias-wall.de"
-  }
+  "HEADER": "Ich bin",
+  "FRONDENDH2": "Frontend Entwickler",
+  "BUTTON": "Kontakt!",
+  "ABOUTH1": "Über mich",
+  "TEXT1": "Hallo, ich bin Frontend-Entwickler, 29 Jahre alt und komme aus Altenkirchen. Meine Erfahrungen habe ich durch eine Ausbildung bei der TÜV-zertifizierten Developer Akademie GmbH gesammelt.",
+  "TEXT2": "Es macht mir großen Spaß, kreative und effektive Lösungen für digitale Probleme zu finden. Die Vielfalt und Dynamik des Programmierens inspiriert mich jeden Tag aufs Neue.",
+  "TEXT3": "Ich bin diszipliniert und habe ein logisches Verständnis, das mir hilft, auch komplexere Probleme zu lösen. Schauen Sie sich gerne meine Projekte an, um einen Eindruck davon zu bekommen, woran ich gearbeitet habe.",
+  "SKILLS-h1": "Meine skills",
+  "SKILLS-p": "Meine Entwicklererfahrung im Frontend habe ich durch verschiedene reale Projekte gut entwickeln können.",
+  "SKILLS-BTN": "Kontaktieren",
+  "PORTFOLIO-TEXT1": "Schauen Sie sich hier ein Teil meiner Arbeiten an – Testen Sie die Projekte, um meine Fähigkeiten in Aktion zu sehen.",
+
+  "CONTACT-h1": "Kontakt",
+  "CONTACT-h2": "Haben Sie ein Problem zu lösen?",
+  "CONTACT-TEXT1": "Kontaktieren Sie mich über dieses Formular. Ich interessiere mich für Ihre Projekte und würde gerne mit meiner Arbeit bei Ihren Projekten mitarbeiten.",
+  "CONTACT-TEXT2": "Brauchen Sie einen Frontend Entwickler?",
+  "CONTACT-TEXT3": "Kontaktieren Sie mich!"
+}

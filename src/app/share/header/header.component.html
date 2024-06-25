@@ -2,9 +2,11 @@
   <div class="max-width">
     <a href="#landingpage" *ngIf="!isHeaderOpen"><img src="./assets/img/logo.png" alt="" /></a>
     <div class="header-link" *ngIf="isHeaderOpen || isWideScreen">
-      <a href="#about-me">About me</a>
-      <a href="#skills">Skills</a>
-      <a href="#portfolio">Portfolio</a>
+      <a (click)="switchLanguage('de'); openHeaderBar();">DE</a>
+      <a (click)="switchLanguage('en'); openHeaderBar();">EN</a>
+      <a (click)="openHeaderBar()" href="#about-me">About me</a>
+      <a (click)="openHeaderBar()" href="#skills">Skills</a>
+      <a (click)="openHeaderBar()" href="#portfolio">Portfolio</a>
     </div>
     <div (click)="openHeaderBar()" class="burger-btn">
       <div class="line"></div>

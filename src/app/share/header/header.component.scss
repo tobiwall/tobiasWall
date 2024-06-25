@@ -37,6 +37,7 @@ header {
         }
 
         > a:hover {
+            cursor: pointer;
             color: rgb(4, 190, 232);
             transform: scale(1.3);
         }
@@ -44,6 +45,12 @@ header {
 
     > .burger-btn {
         display: none;
+        transition: transform 0.3s ease;
+    }
+
+    > .burger-btn:hover {
+        transform: scale(1.3);
+        cursor: pointer;
     }
 }
 
@@ -51,7 +58,7 @@ header {
     display: none;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 780px) {
     .header-link {
         margin-left: 12px;
         margin-right: 0 !important;
@@ -96,5 +103,14 @@ header {
         width: 40px;
         height: 40px;
         margin-right: 24px;
+    }
+}
+
+@media (max-width: 450px) {
+    .header-link {
+        background-color: rgba(20, 29, 47, 0.7);
+        flex-direction: column;
+        margin-top: 160px;
+        padding: 16px;
     }
 }

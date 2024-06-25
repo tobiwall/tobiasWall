@@ -4,14 +4,14 @@
     <h1>Portfolio</h1>
     <div class="line-right"></div>
   </div>
-  <p>Explore a selection of my work here - Interact width projects to see my skills in action.</p>
+  <p>{{ 'PORTFOLIO-TEXT1' | translate }}</p>
   
   <div class="projects" *ngFor="let portfolio of portfolio; let i = index" [class.reverse]="i % 2 === 1">
     <img src="./assets/img/portfolio/{{ portfolio.image }}.png" alt="" />
     <div class="portfolio-right">
       <h3>{{ portfolio.name }}</h3>
       <h4>{{ portfolio.skills }}</h4>
-      <span> {{ portfolio.description }} </span>
+      <span>{{ getDescription(portfolio) }}</span>
       <div class="buttons">
         <a [href]="portfolio.liveUrl" target="_blank">
           <button class="primary">Live test</button>

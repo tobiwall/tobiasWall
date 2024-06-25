@@ -20,6 +20,7 @@ export class ContactformComponent {
   }
 
   mailTest = false;
+  mailSend = false;
 
   post = {
     endPoint: 'https://tobias-wall.de/sendMail.php',
@@ -37,8 +38,8 @@ export class ContactformComponent {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-
             ngForm.resetForm();
+            this.mailSend = true;
           },
           error: (error) => {
             console.error(error);

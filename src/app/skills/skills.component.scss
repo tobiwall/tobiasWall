@@ -51,7 +51,7 @@ section {
         justify-content: flex-end;
 
         > h1 {
-            font-size: 80px;
+            font-size: 64px;
             color: white;
             margin: 0;
         }
@@ -93,7 +93,7 @@ section {
 
 @media(max-width: 1250px) {
     h1 {
-        font-size: 64px !important;
+        font-size: 40px !important;
     }
 
     .left-side {
@@ -123,7 +123,7 @@ section {
 
 @media(max-width: 600px) {
     h1 {
-        font-size: 40px !important;
+        font-size: 32px !important;
     }
     .left-side {
         > img {

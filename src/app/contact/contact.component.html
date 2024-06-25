@@ -3,18 +3,16 @@
     <div class="left-part">
       <div class="headline-container">
         <div class="line"></div>
-        <h1>Contact</h1>
+        <h1>{{ 'CONTACT-h1' | translate }}</h1>
       </div>
-      <h2>Got a problem to solve?</h2>
-      <span
-        >Contact me through this form, I am interested in hearing from you,
-        knowing your ideas and contributing to your projects with my work.
-      </span>
-      <span>Need a Frontend developer? <b>Contact me!</b></span>
+      <h2>{{ 'CONTACT-h2' | translate }}</h2>
+      <span>{{ 'CONTACT-TEXT1' | translate }}</span>
+      <span>{{ 'CONTACT-TEXT2' | translate }} <b>{{ 'CONTACT-TEXT3' | translate }}</b></span>
     </div>
 
     <div class="right-part">
       <app-contactform></app-contactform>
     </div>
   </div>
+  <img class="shadow" src="./assets/img/purple-shadow.png" alt="">
 </section>
