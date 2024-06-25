@@ -6,8 +6,8 @@
   </div>
   <p>{{ 'PORTFOLIO-TEXT1' | translate }}</p>
   
-  <div class="projects" *ngFor="let portfolio of portfolio; let i = index" [class.reverse]="i % 2 === 1">
-    <img src="./assets/img/portfolio/{{ portfolio.image }}.png" alt="" />
+  <div class="projects" #projects *ngFor="let portfolio of portfolio; let i = index" [class.reverse]="i % 2 === 1">
+    <img class="portfolio-image" src="./assets/img/portfolio/{{ portfolio.image }}.png" alt="" />
     <div class="portfolio-right">
       <h3>{{ portfolio.name }}</h3>
       <h4>{{ portfolio.skills }}</h4>

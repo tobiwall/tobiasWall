@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ElementRef, ViewChildren, QueryList } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { HeaderComponent } from '../share/header/header.component';
@@ -10,14 +10,29 @@ import { SharedService } from '../shared.service';
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss'
 })
-export class PortfolioComponent implements OnInit {
+export class PortfolioComponent implements AfterViewInit {
+  @ViewChildren('projects') projectElements!: QueryList<ElementRef>;
+
   currentLanguage: string | undefined;
 
   constructor(private sharedService: SharedService, private translate: TranslateService) {}
 
-  ngOnInit() {
-    this.sharedService.currentLanguage$.subscribe(language => {
-      this.currentLanguage = language;
+  ngAfterViewInit(): void {
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+          } else {
+            entry.target.classList.remove('animate');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    this.projectElements.forEach((project: ElementRef) => {
+      observer.observe(project.nativeElement);
     });
   }
 
@@ -51,8 +66,8 @@ export class PortfolioComponent implements OnInit {
     {
       name: 'Simple CRM',
       skills: 'TypeScript | SCSS | Angular | Firebase',
-      descriptionDE: 'Dieses Projekt ist bald fertig.',
-      descriptionEN: 'This Project will be ready soon',
+      descriptionDE: 'Dieses Projekt wird bald fertig sein!!! Ein sehr einfaches Customer-Relationship-Management-System mit CRUD-Funktionalität.',
+      descriptionEN: 'This Project will be ready soon!!! A very Simple Customer Relationship Management system working width CRUD funktionality.',
       image: 'empty-screen',
       githubUrl: 'https://github.com/tobiwall',
       liveUrl: ''
@@ -67,5 +82,11 @@ export class PortfolioComponent implements OnInit {
       liveUrl: 'https://pokedex.tobias-wall.de/index.html'
     }
   ]
+
+  ngOnInit() {
+    this.sharedService.currentLanguage$.subscribe(language => {
+      this.currentLanguage = language;
+    });
+  }
 
 }

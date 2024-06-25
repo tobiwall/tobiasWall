@@ -14,6 +14,16 @@ section {
     padding-top: 64px;
     display: flex;
     max-width: 1920px;
+    position: relative;
+}
+
+.goUpBtn {
+    z-index: 999;
+    position: absolute;
+    bottom: -110px;
+    right: 64px;
+    width: 48px;
+    height: 48px;
 }
 
 .shadow {
@@ -81,6 +91,10 @@ section {
     .max-width {
         flex-direction: column;
         align-items: center;
+    }
+
+    .goUpBtn {
+        right: 16px;
     }
 
     .shadow {

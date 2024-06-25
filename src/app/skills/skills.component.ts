@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
@@ -6,8 +6,32 @@ import { TranslateModule } from '@ngx-translate/core';
   standalone: true,
   imports: [TranslateModule],
   templateUrl: './skills.component.html',
-  styleUrl: './skills.component.scss'
+  styleUrls: ['./skills.component.scss']
 })
-export class SkillsComponent {
+export class SkillsComponent implements AfterViewInit {
+  @ViewChild('leftSide') leftSide!: ElementRef;
+  @ViewChild('rightSide') rightSide!: ElementRef;
 
+  ngAfterViewInit() {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+          } else {
+            entry.target.classList.remove('animate');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (this.leftSide?.nativeElement) {
+      observer.observe(this.leftSide.nativeElement);
+    }
+
+    if (this.rightSide?.nativeElement) {
+      observer.observe(this.rightSide.nativeElement);
+    }
+  }
 }

@@ -98,3 +98,21 @@
         left: -120px;
     }
 }
+
+@media (min-height: 1000px) {
+    .shadow-green {
+        top: 400vh;
+    }
+}
+
+@media (min-height: 1200px) {
+    .shadow-green {
+        top: 340vh;
+    }
+}
+
+@media (min-height: 1500px) {
+    .shadow-green {
+        top: 290vh;
+    }
+}
