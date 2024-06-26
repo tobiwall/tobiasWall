@@ -4,7 +4,7 @@
     <div class="header-link" *ngIf="isHeaderOpen || isWideScreen">
       <a (click)="switchLanguage('de'); openHeaderBar();">DE</a>
       <a (click)="switchLanguage('en'); openHeaderBar();">EN</a>
-      <a (click)="openHeaderBar()" href="#about-me">About me</a>
+      <a (click)="openHeaderBar()" href="#about-me">{{ "ABOUTH1" | translate }}</a>
       <a (click)="openHeaderBar()" href="#skills">Skills</a>
       <a (click)="openHeaderBar()" href="#portfolio">Portfolio</a>
     </div>
