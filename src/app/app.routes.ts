@@ -1,4 +1,5 @@
-import { Routes } from '@angular/router';
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
 import { MainPageComponent } from './main-page/main-page.component';
 import { DatenschutzComponent } from './datenschutz/datenschutz.component';
 import { ImpressumComponent } from './impressum/impressum.component';
@@ -18,4 +19,12 @@ export const routes: Routes = [
         path: 'impressum',
         component: ImpressumComponent
     },
+    { path: '', redirectTo: '/home', pathMatch: 'full' }, // Beispiel: Redirect zur Startseite
+    { path: '**', redirectTo: '/404' }
 ];
+
+@NgModule({
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
+})
+export class AppRoutingModule { }

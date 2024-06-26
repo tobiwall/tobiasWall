@@ -15,5 +15,13 @@
   "CONTACT-h2": "Got a problem to solve?",
   "CONTACT-TEXT1": "Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.",
   "CONTACT-TEXT2": "Need a Frontend developer?",
-  "CONTACT-TEXT3": "Contact me!"
+  "CONTACT-TEXT3": "Contact me!",
+  "accept": "I accept the",
+  "privacy": "privacy policy",
+  "mailSend": "Mail send",
+
+  "imprint": "imprint",
+  "angaben-paragraph": "Entries referred to",
+  "represented": "Represented by"
+
 }

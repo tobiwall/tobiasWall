@@ -15,5 +15,14 @@
   "CONTACT-h2": "Haben Sie ein Problem zu lösen?",
   "CONTACT-TEXT1": "Kontaktieren Sie mich über dieses Formular. Ich interessiere mich für Ihre Projekte und würde gerne mit meiner Arbeit bei Ihren Projekten mitarbeiten.",
   "CONTACT-TEXT2": "Brauchen Sie einen Frontend Entwickler?",
-  "CONTACT-TEXT3": "Kontaktieren Sie mich!"
+  "CONTACT-TEXT3": "Kontaktieren Sie mich!",
+  "accept": "Ich akzeptiere die",
+  "privacy": "Datenschutzerklärung",
+  "mailSend": "Email versandt",
+
+  "imprint": "Impressum",
+  "angaben-paragraph": "Angaben gemäß",
+  "represented": "Vertreten durch"
+
+
 }

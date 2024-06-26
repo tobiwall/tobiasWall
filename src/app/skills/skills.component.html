@@ -1,6 +1,12 @@
 <section id="skills">
   <div class="max-width">
-    <div class="left-side" #leftSide>
+    <div
+      data-aos="fade-right"
+      data-aos-offset="300"
+      data-aos-easing="ease-in-sine"
+      class="right-container"
+      class="left-side"
+    >
       <img src="./assets/img/skills1.png" alt="Skill 1" />
       <img src="./assets/img/skills2.png" alt="Skill 2" />
       <img src="./assets/img/skills3.png" alt="Skill 3" />
@@ -12,13 +18,21 @@
       <img src="./assets/img/skills9.png" alt="Skill 9" />
       <img src="./assets/img/skills10.png" alt="Skill 10" />
     </div>
-    <div class="right-side" #rightSide>
+    <div
+      data-aos="fade-left"
+      data-aos-offset="300"
+      data-aos-easing="ease-in-sine"
+      class="right-container"
+      class="right-side"
+    >
       <div class="headline-container">
-        <h1>{{ 'SKILLS-h1' | translate }}</h1>
+        <h1>{{ "SKILLS-h1" | translate }}</h1>
         <div class="line"></div>
       </div>
-      <p>{{ 'SKILLS-p' | translate }}</p>
-      <a href="#contact"><button>{{ 'SKILLS-BTN' | translate }}</button></a>
+      <p>{{ "SKILLS-p" | translate }}</p>
+      <a href="#contact"
+        ><button>{{ "SKILLS-BTN" | translate }}</button></a
+      >
     </div>
   </div>
 </section>

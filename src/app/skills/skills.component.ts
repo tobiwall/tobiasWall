@@ -1,6 +1,6 @@
-import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
+import { Component, AfterViewInit, ElementRef, ViewChild, OnInit } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
-
+declare var AOS: any;
 @Component({
   selector: 'app-skills',
   standalone: true,
@@ -8,30 +8,9 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.scss']
 })
-export class SkillsComponent implements AfterViewInit {
-  @ViewChild('leftSide') leftSide!: ElementRef;
-  @ViewChild('rightSide') rightSide!: ElementRef;
 
-  ngAfterViewInit() {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('animate');
-          } else {
-            entry.target.classList.remove('animate');
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    if (this.leftSide?.nativeElement) {
-      observer.observe(this.leftSide.nativeElement);
-    }
-
-    if (this.rightSide?.nativeElement) {
-      observer.observe(this.rightSide.nativeElement);
-    }
+export class SkillsComponent implements OnInit {
+  ngOnInit(): void {
+      AOS.init();
   }
 }

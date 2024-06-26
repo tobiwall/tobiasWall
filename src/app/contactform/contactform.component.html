@@ -7,6 +7,9 @@
     name="name"
     placeholder="Your name"
     required
+    [ngClass]="{
+      'error-border': showErrorBorder && !contactForm.controls['name']?.valid
+    }"
   />
   <input
     [(ngModel)]="contactData.email"
@@ -17,24 +20,56 @@
     placeholder="Your email"
     required
     pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+    [ngClass]="{
+      'error-border': showErrorBorder && !contactForm.controls['email']?.valid
+    }"
   />
   <textarea
-    #message="ngModel"
-    minlength="4"
     [(ngModel)]="contactData.message"
-    type="text"
     id="message"
     class="input-style"
     name="message"
     placeholder="Your message"
     required
+    [ngClass]="{
+      'error-border': showErrorBorder && !contactForm.controls['message']?.valid
+    }"
   ></textarea>
-  @if (!message.valid && message.touched) {
-    <span>Please enter a message</span>
-  }
-  @if (mailSend) {
-    <span>Mail send</span>
-  }
+  <div class="checkbox-container">
+    <input
+      type="checkbox"
+      id="privacyPolicy"
+      name="privacyPolicy"
+      [(ngModel)]="contactData.privacyPolicy"
+      required
+      #privacyPolicy="ngModel"
+    />
+    <label
+      [ngClass]="{ 'checkbox-error': showErrorBorder && !privacyPolicy.valid && privacyPolicy.touched }"
+      for="privacyPolicy"
+      >
+      <span class="custom-checkbox"></span>
+      {{ "accept" | translate }}
+      <a [ngClass]="{ 'checkbox-error': showErrorBorder && privacyPolicy.invalid && privacyPolicy.touched }" [routerLink]="'/datenschutz'">{{ "privacy" | translate }}</a>
+    </label>
+  </div>
 
-  <input class="button" type="submit" value="Send message" />
+  <span *ngIf="contactForm.submitted && !contactForm.controls['message']?.valid"
+    >Please enter a message</span
+  >
+  <span *ngIf="mailSend">{{ "mailSend" | translate }}</span>
+
+  <div class="button-wrapper">
+    <input
+      class="button"
+      type="submit"
+      value="Send message"
+      [disabled]="!contactForm.form.valid"
+    />
+    <div
+      class="overlay"
+      *ngIf="!contactForm.form.valid"
+      (click)="checkFormValidity(contactForm)"
+    ></div>
+  </div>
 </form>
