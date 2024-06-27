@@ -2,11 +2,12 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit, HostListener } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { SharedService } from '../../shared.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, TranslateModule],
+  imports: [CommonModule, TranslateModule, RouterModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
@@ -18,14 +19,7 @@ export class HeaderComponent implements OnInit {
   constructor(private sharedService: SharedService, private translate: TranslateService) {
     this.translate.setDefaultLang('en');
     this.translate.addLangs(['en', 'de']);
-
-    //Use english as basic language
     this.translate.use('en');
-
-    // adjust language to browser language
-
-    // const browserLang = this.translate.getBrowserLang();
-    // this.translate.use(browserLang && browserLang.match(/en|de/) ? browserLang : 'en');
   }
 
   switchLanguage(language: string) {
