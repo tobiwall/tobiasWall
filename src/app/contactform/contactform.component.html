@@ -20,10 +20,12 @@
     placeholder="Your email"
     required
     pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+    #email="ngModel"
     [ngClass]="{
       'error-border': showErrorBorder && !contactForm.controls['email']?.valid
     }"
   />
+  <span *ngIf="!email.valid && email.touched">{{ "exampleEmail" | translate }}</span>
   <textarea
     [(ngModel)]="contactData.message"
     id="message"
@@ -57,7 +59,7 @@
   <span *ngIf="contactForm.submitted && !contactForm.controls['message']?.valid"
     >Please enter a message</span
   >
-  <span *ngIf="mailSend">{{ "mailSend" | translate }}</span>
+  <span class="mail-send" *ngIf="mailSend">{{ "mailSend" | translate }}</span>
 
   <div class="button-wrapper">
     <input

@@ -126,3 +126,28 @@ section {
         margin: 16px !important;
     }
 }
+
+@media (max-width: 400px) {
+    .left-part {
+      opacity: 1 !important;
+      transform: none !important;
+    }
+    
+    .right-part {
+      opacity: 1 !important;
+      transform: none !important;
+    }
+  }
+
+@media (max-height: 500px) {
+    .left-part {
+      opacity: 1 !important;
+      transform: none !important;
+    }
+
+    .right-part {
+      opacity: 1 !important;
+      transform: none !important;
+    }
+  }
+

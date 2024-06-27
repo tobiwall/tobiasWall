@@ -18,8 +18,10 @@ footer {
             justify-content: center;
 
             > a {
+                display: flex;
+                justify-content: center;
                 > img {
-                    width: 90%;
+                    width: 70%;
                 }
             }
 
@@ -61,7 +63,7 @@ footer {
 
 @media (max-width: 1000px) {
     footer {
-        height: 380px;
+        height: 280px;
     }
     .max-width {
         height: 100%;
@@ -78,5 +80,15 @@ footer {
         > .left-part {
             width: 100% !important;
         }
+    }
+}
+
+@media (max-width: 600px) {
+    .middle-part {
+        width: 60% !important;
+    }
+
+    footer {
+        height: 200px;
     }
 }

@@ -21,10 +21,6 @@ header {
         }
     }
 
-    > a:hover {
-        transform: scale(1.3);
-    }
-
     > .header-link {
         display: flex;
         gap: 24px;
@@ -56,6 +52,12 @@ header {
 
 .d-none {
     display: none;
+}
+
+@media (min-width: 780px) {
+    .logo:hover {
+        transform: scale(1.3);
+    }
 }
 
 @media (max-width: 780px) {

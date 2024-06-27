@@ -1,6 +1,6 @@
 <header>
   <div class="max-width">
-    <a href="#landingpage" *ngIf="!isHeaderOpen"><img src="./assets/img/logo.png" alt="" /></a>
+    <a class="logo" href="#landingpage" *ngIf="!isHeaderOpen"><img src="./assets/img/logo.png" alt="" /></a>
     <div class="header-link" *ngIf="isHeaderOpen || isWideScreen">
       <a (click)="switchLanguage('de'); openHeaderBar();">DE</a>
       <a (click)="switchLanguage('en'); openHeaderBar();">EN</a>

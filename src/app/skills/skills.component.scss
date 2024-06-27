@@ -1,4 +1,8 @@
 /* skills.component.scss */
+* {
+  overflow-x: hidden;
+}
+
 section {
     width: 100%;
     min-height: fit-content;
@@ -136,3 +140,14 @@ section {
     }
   }
   
+  @media (max-height: 500px) and (max-width: 1000px) {
+    .left-side {
+      opacity: 1 !important;
+      transform: none !important;
+    }
+
+    .right-side {
+      opacity: 1 !important;
+      transform: none !important;
+    }
+  }

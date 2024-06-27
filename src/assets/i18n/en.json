@@ -16,9 +16,9 @@
   "CONTACT-TEXT2": "Need a Frontend developer?",
   "CONTACT-TEXT3": "Contact me!",
   "accept": "I accept the",
-  "privacy": "privacy policy",
+  "privacy": "Privacy policy",
   "mailSend": "Mail send",
-  "imprint": "imprint",
+  "imprint": "Imprint",
   "angaben-paragraph": "Entries referred to",
   "represented": "Represented by",
   "imprint-kontact": "Contact",
@@ -71,6 +71,7 @@
   "CONTACT_INFO": "<p>When contacting us (e.g., by mail, contact form, email, phone, or via social media) and within the framework of existing user and business relationships, the information of the requesting persons is processed to the extent necessary to respond to the contact requests and any requested measures.</p><ul class=\"m-elements\"><li><strong>Types of data processed:</strong> Inventory data (e.g., full name, home address, contact information, customer number, etc.); contact data (e.g., postal and email addresses or phone numbers); content data (e.g., textual or visual messages and contributions and the information concerning them, such as authorship information or time of creation); usage data (e.g., page views and length of stay, click paths, usage intensity and frequency, device types and operating systems used, interactions with content and functions). Meta-, communication- and procedural data (e.g., IP addresses, timestamps, identification numbers, involved persons).</li><li><strong>Persons affected:</strong> Communication partners.</li><li><strong>Purposes of processing:</strong> Communication; organizational and administrative procedures; feedback (e.g., collecting feedback via online form). Provision of our online offer and user-friendliness.</li><li><strong>Retention and deletion:</strong> Deletion according to the information in the section \"General information on data storage and deletion\".</li><li class=\"\"><strong>Legal bases:</strong> Legitimate interests (Art. 6 para. 1 sentence 1 lit. f) GDPR). Fulfillment of contract and pre-contractual inquiries (Art. 6 para. 1 sentence 1 lit. b) GDPR).</li></ul><p><strong>Further notes on processing, procedures, and services:</strong></p><ul class=\"m-elements\"><li><strong>Contact form: </strong>When contacting us via our contact form, email, or other communication methods, we process the personal data transmitted to us to respond to and handle the respective request. This usually includes information such as name, contact information, and possibly other information communicated to us and required for proper handling. We use this data exclusively for the specified purpose of contact and communication; <span class=\"\"><strong>Legal bases:</strong> Fulfillment of contract and pre-contractual inquiries (Art. 6 para. 1 sentence 1 lit. b) GDPR), Legitimate interests (Art. 6 para. 1 sentence 1 lit. f) GDPR).</span></li></ul>",
   "DatenschutzLink": "Created with the free Data Protection Generator.de by Dr. Thomas Schwenke",
   "ImgOf": "Image of",
-  "auf": "on"
+  "auf": "on",
+  "exampleEmail": "Example: test@email.de"
 
 }

@@ -9,22 +9,20 @@ export const routes: Routes = [
         path: '',
         component: MainPageComponent
     },
-
     {
         path: 'datenschutz',
         component: DatenschutzComponent
     },
-
     {
         path: 'impressum',
         component: ImpressumComponent
     },
-    { path: '', redirectTo: '/home', pathMatch: 'full' }, // Beispiel: Redirect zur Startseite
+    { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: '**', redirectTo: '/404' }
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes)],
+    imports: [RouterModule.forRoot(routes, { scrollPositionRestoration: 'top' })],
     exports: [RouterModule]
 })
 export class AppRoutingModule { }
